@@ -1,0 +1,77 @@
+{
+  "name": "n8n-nodes-pdf-extractor",
+  "version": "0.1.0",
+  "description": "PDF Extractor for n8n",
+  "keywords": [
+    "n8n",
+    "n8n-nodes",
+    "n8n-community",
+    "n8n-community-nodes",
+    "n8n-community-nodes-pdf-extractor",
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/annhdev/n8n-nodes-pdf-extractor.git",
+  "author": {
+    "name": "annhdev",
+    "email": "annh.dev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/annhdev/n8n-nodes-pdf-extractor.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rimraf dist && tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes --write",
+    "lint": "eslint nodes package.json",
+    "lintfix": "eslint nodes package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c eslint.config.prepublish.js nodes package.json",
+    "publish": "npm publish",
+    "test": "set NODE_OPTIONS=\"--experimental-vm-modules\"&jest --detectOpenHandles"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "nodes": [
+      "dist/nodes/PdfExtractor/PdfExtractor.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.32.0",
+    "@types/expect": "^1.20.4",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/parser": "~8.38.0",
+    "chai": "^5.2.1",
+    "eslint": "^9.32.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "globals": "^16.3.0",
+    "gulp": "^5.0.1",
+    "jest": "^30.0.5",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "form-data": "^4.0.4"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "enumify": "^2.0.0",
+    "jsdom": "^26.1.0",
+    "pdfjs-dist": "^4.10.38",
+    "unpdf": "^1.1.0"
+  }
+}
