@@ -30,6 +30,7 @@ npm install n8n-nodes-pdf-extractor
 
 ## References
 
+- [pdfjs](https://github.com/mozilla/pdf.js)
 - [unpdf](https://github.com/unjs/unpdf)
 - [pdf-to-markdown](https://github.com/jzillmann/pdf-to-markdown)
 

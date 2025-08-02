@@ -70,7 +70,6 @@
   },
   "dependencies": {
     "enumify": "^2.0.0",
-    "jsdom": "^26.1.0",
     "pdfjs-dist": "^4.10.38",
     "unpdf": "^1.1.0"
   }
