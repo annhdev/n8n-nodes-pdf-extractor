@@ -16,7 +16,6 @@ export class PdfExtractor implements INodeType {
 		icon: "file:icon.svg",
 		group: ["transform"],
 		version: 1,
-		subtitle: "={{$parameter['operation'] + ': ' + $parameter['resource']}}",
 		description: "Extracts text and markdown from PDF files",
 		defaults: {
 			name: "PDF Extractor",
